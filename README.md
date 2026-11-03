@@ -2,8 +2,8 @@
 
 Unreal Engine 5 모듈 조립형 절차적 맵 생성 기술 템플릿 · 시드 기반 방 조립, 런타임 내비메시, 멀티플레이 동기화, 재사용 플러그인
 
-> **진행 중 · 현재 STEP 0 (연구·설계)**
-> 아직 UE5 프로젝트와 코드는 없습니다. 이 저장소는 단계별 구현 기록을 위해 먼저 만들었습니다.
+> **진행 중 · STEP 2~4 구현 (모듈 규격, 그레이박스 키트, 시드 조립)**
+> 플러그인 `Plugins/ProcLevelGen`은 꿈 수거반 프로젝트 안에서 만들고 게임에서 바로 테스트합니다. 바뀔 때마다 이 저장소에도 같은 내용으로 커밋합니다.
 
 ## 목적
 
@@ -27,18 +27,18 @@ Unreal Engine 5 모듈 조립형 절차적 맵 생성 기술 템플릿 · 시드
 | 8 | 디버그와 검증: 시드 고정, 시각화, 자동 생성 검사 |
 | 9 | 다른 프로젝트 적용: 플러그인화 |
 
-## 폴더 구조 (계획)
+## 폴더 구조
 
 | 폴더 | 내용 |
 |---|---|
-| `Plugins/ProcLevelGen` | 다른 프로젝트에 가져갈 생성기 본체 (C++ + 데이터) |
+| `Plugins/ProcLevelGen` | 다른 프로젝트에 가져갈 생성기 본체 (C++ + 데이터). 규격은 `Plugins/ProcLevelGen/Docs/ModuleSpec.md` |
 | `Content/Rooms` | 테스트용 방 모듈 (시작 · 통로 · 방 · 끝) |
 | `Content/Maps` | 테스트 맵 |
 | `Docs` | 모듈 규격과 단계별 기록 |
 
 ## 첫 적용 후보
 
-[꿈 수거반 (Dream Movers)](https://github.com/JiwonEnv/Unreal-Engine-5-Oil-Pastel-Dreamcore-Game). 적용 범위는 아직 정하지 않았습니다.
+[꿈 수거반 (Dream Movers)](https://github.com/JiwonEnv/Unreal-Engine-5-Oil-Pastel-Dreamcore-Game). 1챕터 저택의 방 모듈(고정 방 3 + 일반 방 틀 2 + 통로 3)을 판마다 재배치합니다. 테스트 맵은 그 프로젝트의 `Lvl_ProcGen`입니다.
 
 ## 환경
 
